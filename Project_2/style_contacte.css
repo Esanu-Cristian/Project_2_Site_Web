@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("images/aboutus_back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 13px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+#topbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0 0 12px 12px;
+}
+
+    #topbar ul li {
+        margin: 0 25px;
+    }
+
+#topbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+    #topbar a:hover {
+        background: #0770db;
+        color: #fff;
+    }
+
+main {
+    padding: 40px 10px 0 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+article {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 2em 2em 1em 2em;
+    margin-bottom: 40px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #0770db;
+    text-align: center;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+#details {
+    font-size: 1.15rem;
+    color: #004ead;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+address {
+    font-style: normal;
+    color: #222;
+}
+
+blockquote {
+    margin: 1em 0;
+    background-color: #f7faff;
+    border-left: 4px solid #0770db;
+    padding: 1em 2em;
+    font-size: 1.15rem;
+    font-family: 'Roboto Slab', serif;
+    color: #222;
+    transition: background 0.2s;
+}
+
+    blockquote:hover {
+        background-color: #e3f2fd;
+    }
+
+.contact-info {
+    margin: 2em 0 1em 0;
+}
+
+    .contact-info h2 {
+        color: #0770db;
+        font-size: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .contact-info ul {
+        list-style: disc inside;
+        color: #004ead;
+        font-size: 1.05rem;
+        margin-left: 1em;
+    }
+
+.contact-form-section {
+    margin-top: 2em;
+}
+
+    .contact-form-section h2 {
+        color: #0770db;
+        font-size: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+    .contact-form label {
+        font-weight: 600;
+        color: #004ead;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.7em;
+        border: 1px solid #b2d8ff;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-family: inherit;
+        background: #f7fbff;
+        transition: border 0.2s, box-shadow 0.2s;
+    }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border: 1.5px solid #0770db;
+            outline: none;
+            box-shadow: 0 0 0 2px #e3f2fd;
+        }
+
+    .contact-form button {
+        background: #0770db;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 0.9em 0;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s;
+    }
+
+        .contact-form button:hover {
+            background: #008c02;
+            transform: translateY(-2px) scale(1.03);
+        }
+
+footer {
+    background-color: #29293a;
+    color: white;
+    padding: 1em 0;
+    margin: 0;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 900px) {
+    main {
+        max-width: 98vw;
+        padding: 20px 2vw 0 2vw;
+    }
+
+    article {
+        padding: 1em 0.5em;
+    }
+}
+
+@media (max-width: 600px) {
+    #topbar ul {
+        flex-direction: column;
+        border-radius: 0 0 8px 8px;
+    }
+
+        #topbar ul li {
+            margin: 8px 0;
+        }
+
+    article {
+        padding: 0.5em 0.2em;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}

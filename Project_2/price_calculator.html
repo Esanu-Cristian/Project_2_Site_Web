@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width">
+    <title>Project 2 Price Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="style_price_calculator.css" rel="stylesheet" />
+    <script src="js/data.js" defer></script>
+    <script src="js/functions.js" defer></script>
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav id="topbar">
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="servicii.html">SERVICES</a></li>
+                <li><a href="preturi.html">PRICES</a></li>
+                <li><a href="contacte.html">CONTACTS</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="calculator-section">
+            <h1>Price Calculator</h1>
+            <div class="input-group">
+                <label for="rooms">Number of rooms:</label>
+                <input type="number" id="rooms" min="1" value="1" />
+            </div>
+            <div id="benefits">
+                <h2>What you get:</h2>
+                <ul>
+                    <li>Professional installation for each room</li>
+                    <li>Smart control integration</li>
+                    <li>Premium speakers and amplifiers</li>
+                    <li>Lifetime warranty & 24/7 support</li>
+                    <li>Free shipping for orders over $25,000</li>
+                </ul>
+            </div>
+            <table class="table-fill" id="price-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Product</th>
+                        <th>Number of rooms</th>
+                        <th>Price per room</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- JS will fill this -->
+                </tbody>
+                <tfoot>
+                    <tr class="totals">
+                        <td colspan="4">Subtotal</td>
+                        <td id="subtotal"></td>
+                    </tr>
+                    <tr class="totals">
+                        <td colspan="4">Tax (19%)</td>
+                        <td id="tax"></td>
+                    </tr>
+                    <tr class="totals">
+                        <td colspan="4">Shipping</td>
+                        <td id="shipping"></td>
+                    </tr>
+                    <tr class="totals">
+                        <td colspan="4" class="focus">Grand Total</td>
+                        <td class="focus" id="grand"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

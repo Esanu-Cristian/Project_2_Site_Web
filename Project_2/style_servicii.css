@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url("images/servicii_back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    padding: 13px;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+#topbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: rgba(0,0,0,0.7);
+    border-radius: 0 0 12px 12px;
+}
+
+    #topbar ul li {
+        margin: 0 25px;
+    }
+
+#topbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+    #topbar a:hover {
+        background: #0770db;
+        color: #fff;
+    }
+
+main {
+    padding: 40px 10px 0 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+article {
+    background: rgba(255,255,255,0.95);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 2em 2em 1em 2em;
+    margin-bottom: 40px;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #0770db;
+    text-align: center;
+    margin-bottom: 0.5em;
+    letter-spacing: 2px;
+}
+
+#details {
+    font-size: 1.15rem;
+    color: #008c02;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+.service-card {
+    background: #f7faff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(7,112,219,0.08);
+    padding: 2em 1.5em;
+    width: 240px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    border: 2px solid transparent;
+}
+
+    .service-card h2 {
+        color: #0770db;
+        font-size: 1.2rem;
+        margin-bottom: 0.5em;
+    }
+
+    .service-card p {
+        color: #222;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .service-card:hover {
+        background: #e3f2fd;
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(7,112,219,0.18);
+        border: 2px solid #0770db;
+    }
+
+#buttons {
+    text-align: center;
+    margin: 2em 0 1em 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+    #buttons a {
+        border: 1pt solid #ececec;
+        border-radius: 8px;
+        padding: 1em 2em;
+        font-size: 1.1rem;
+        text-decoration: none;
+        background: #0770db;
+        color: #fff;
+        font-weight: 700;
+        transition: background 0.2s, color 0.2s, transform 0.2s;
+        box-shadow: 0 2px 8px rgba(7,112,219,0.08);
+    }
+
+        #buttons a:hover {
+            color: #fff;
+            background-color: #008c02;
+            transform: translateY(-2px) scale(1.03);
+        }
+
+footer {
+    background-color: #29293a;
+    color: white;
+    padding: 1em 0;
+    margin: 0;
+    text-align: center;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+}
+
+    footer a:link, footer a:visited {
+        color: #008c02;
+        text-decoration: none;
+    }
+
+@media (max-width: 900px) {
+    main {
+        max-width: 98vw;
+        padding: 20px 2vw 0 2vw;
+    }
+
+    article {
+        padding: 1em 0.5em;
+    }
+
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90vw;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    #topbar ul {
+        flex-direction: column;
+        border-radius: 0 0 8px 8px;
+    }
+
+        #topbar ul li {
+            margin: 8px 0;
+        }
+
+    article {
+        padding: 0.5em 0.2em;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+}
